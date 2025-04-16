@@ -1,2 +1,7 @@
 .env
-audios/
+data/
+*.zip
+*.jsonl
+test/
+labo/
+*.wav
