@@ -106,8 +106,8 @@ def generate_data_jsonl(output_file, audio_dir):
 def generate_set(json_path, output_dir, jsonl_path):
     text_list = load_text_data(json_path=json_path)
     generate_audio_files(text_list, output_dir=output_dir)
-    upsample_audio_files(input_dir=output_dir, output_dir=f"upsample_{output_dir}")
-    generate_data_jsonl(output_file=jsonl_path, audio_dir=f"upsample_{output_dir}")
+    upsample_audio_files(input_dir=output_dir, output_dir=f"upsampled_{output_dir}")
+    generate_data_jsonl(output_file=jsonl_path, audio_dir=f"upsampled_{output_dir}")
 
 if __name__ == "__main__":
     generate_set(json_path='files/qa_pairs.json', output_dir='audios', jsonl_path='data.jsonl')

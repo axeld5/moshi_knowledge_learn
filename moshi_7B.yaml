@@ -1,6 +1,6 @@
 # data
 data:
-  eval_data: '' # Optional Fill
+  eval_data: 'eval_data.jsonl' # Optional Fill
   shuffle: true
   train_data: 'data.jsonl' # Fill
 
@@ -21,7 +21,7 @@ text_padding_weight: .5
 # optim
 duration_sec: 100
 batch_size: 4
-max_steps: 5000
+max_steps: 500
 gradient_checkpointing: true
 optim:
   lr: 2e-6
@@ -32,14 +32,14 @@ optim:
 seed: 0
 log_freq: 1
 eval_freq: 100
-do_eval: false
+do_eval: true
 do_ckpt: true
 ckpt_freq: 100
 
 
 save_adapters: true # Must be False if full_finetuning is True
 
-run_dir: "./test_v2"  # Fill
+run_dir: "./full_run"  # Fill
 
 # This part is optional and can be kept commented out
 # wandb:

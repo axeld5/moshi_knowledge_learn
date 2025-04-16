@@ -1,7 +1,7 @@
 import soundfile as sf
 import os
 
-def validate_audio_files(input_dir='data/data/audios'):
+def validate_audio_files(input_dir):
     """
     Validate audio files in the given directory.
     
@@ -26,3 +26,7 @@ def validate_audio_files(input_dir='data/data/audios'):
                 print(f"Error reading file {file_path}: {e}")
                 is_valid = False
     return is_valid
+
+if __name__ == "__main__":
+    validate_audio_files('upsampled_audios')
+    validate_audio_files('upsampled_eval_audios')
